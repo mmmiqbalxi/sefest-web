@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --bg-color:#fdfdfd;
+    --text-color:#161616;
+    --teks-color:rgb(15, 102, 233);
+    --btn-color:#353434;
+    --card-color:#c2bbbb;
+}
+
+body{
+    min-height: 100vh;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: var(--bg-color);
+}
+
+.logo{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: default;
+}
+
+nav a {
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a {
+    position: relative;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--teks-color);
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--teks-color);
+}
+
+
+.beranda{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beranda .content{
+    text-align: center;
+    margin-top:50px ;
+}
+
+.beranda .content h1{
+    font-size: 3rem;
+    width: 1100px;
+}
+
+.beranda .button{
+    margin-top: 90px;
+}
+.beranda .btn{
+    padding: 15px 45px;
+    background-color: var(--btn-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--bg-color);
+    border: 2px solid var(--btn-color);
+    transition: .3s;
+}
+
+.beranda .btn:hover{
+    background-color: var(--bg-color);
+    border: 2px solid var(--btn-color);
+    color: var(--btn-color);
+}
+
+
+
+/*Kursus*/
+.kursus{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.judul {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.judul h1 {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.judul h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card {
+    width: 280px;
+    background-color: var(--card-color);
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0, 2);
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    padding: 10px 10px;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+.card-content {
+    padding: 16px;
+}
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+.card-container .btn {
+    display: inline-block;
+    padding-bottom: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #1841d8;
+}
+
+/* ------- TENTANG KAMI ------- */
+.tentang-kami {
+    width: 90%;
+    margin: auto;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.tentang-kami .judul h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.tentang-kami .judul h3 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.tentang-kami .isi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+    padding-top: 30px;
+}
+
+.tentang-kami .isi .website,
+.tentang-kami .isi .tentang {
+    width: 45%;
+    height: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tentang-kami .isi h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.tentang-kami .isi p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+#menu-icon{
+    font-size: 3rem;
+    color: var(--text-color);
+    display: none;
+}
+
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.25rem 4%;
+    }
+    .beranda .content h1{
+        font-size: 2rem;
+        width: 900px;
+    }
+}
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .beranda .content h1{
+        font-size: 2rem;
+        width: 250px;
+    }
+    .beranda .btn{
+        padding: 10px 40px;
+        font-size: 15px;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 4%;
+        display: none;
+        background: var(--bg-color);
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        margin: 1.5rem 0;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .judul h1 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .judul h3 {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .tentang-kami .judul h1 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .tentang-kami .judul h3 {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .tentang-kami .isi {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tentang-kami .isi h2{
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .tentang-kami .isi p{
+        font-size: 10px;
+    }
+
+    .tentang-kami .isi .website,
+    .tentang-kami .isi .tentang {
+        width: 90%;
+    }
+
+}
+
